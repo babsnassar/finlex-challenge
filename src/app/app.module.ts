@@ -7,9 +7,12 @@ import { AddAccountComponent } from './components/add-account/add-account.compon
 import { ViewAccountComponent } from './components/view-account/view-account.component';
 import { UpdateAccountComponent } from './components/update-account/update-account.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MatTableModule}  from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

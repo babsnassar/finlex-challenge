@@ -1,7 +1,11 @@
-<h1>{{title}}</h1>
+<div class="nav">
+  <div class="container">
+    <p class="title">{{title}}</p>
+  </div>
+</div>
 
 <div>
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <!-- <nav class="navbar navbar-expand navbar-dark bg-dark">
     <div class="navbar-nav mr-auto">
       <li class="nav-item">
         <a routerLink="accounts" class="nav-link">List All</a>
@@ -16,8 +20,10 @@
         <a routerLink="account/update/:id" class="nav-link">Update</a>
       </li>
     </div>
-  </nav>
+  </nav> -->
+
   <div class="container mt-3">
     <router-outlet></router-outlet>
   </div>
+
 </div>
