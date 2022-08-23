@@ -1,5 +1,8 @@
 <div class="content">
-  <a routerLink="/account/create" class="btn-orange"><i class="fa-solid fa-plus"></i> add account</a>
+  <div class="flex">
+    <h2>All accounts</h2>
+    <a routerLink="/account/create" class="btn-orange"><i class="fa-solid fa-plus"></i> add account</a>
+  </div>
 
   <div class="mat-elevation-z8 ">
     <table mat-table [dataSource]="dataSource">
