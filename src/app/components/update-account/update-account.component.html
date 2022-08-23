@@ -1,1 +1,41 @@
 <p>update-employee works!</p>
+
+<div style="width: 400px; margin: auto;">
+  <div *ngIf="accountDetail" class="edit-form">
+    <h4>About {{accountDetail.first_name}}'s account</h4>
+    <form>
+      <div class="form-group">
+        <label for="title">First Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="accountDetail.first_name"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Last Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="accountDetail.last_name"
+          name="description"
+        />
+      </div>
+    </form>
+    <button
+      type="submit"
+      class="badge badge-success"
+      (click)="updateAccount()"
+    >
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+  <div *ngIf="!accountDetail">
+    <br />
+    <p>Cannot find this account.</p>
+  </div>
+</div>

@@ -18,6 +18,7 @@ export class UpdateAccountComponent implements OnInit {
   ngOnInit(): void {
     this.getAccount(+this.route.snapshot.paramMap.get('id')!);
   }
+  // refactor this
   getAccount(id:number): void {
     this.accountService.get(id)
       .subscribe(
