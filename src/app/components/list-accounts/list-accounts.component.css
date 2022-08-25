@@ -1,11 +1,5 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
 table {
   width: 100%;
 }
@@ -21,31 +15,6 @@ mat-row, mat-header-row, mat-footer-row, th.mat-header-cell, td.mat-cell, td.mat
 
 th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type {
   padding-right: 0;
-}
-
-.btn-orange {
-  color: #fff;
-  background-color: #F57458;
-  margin-bottom: 15px;
-  padding: 10px 12px;
-  border-radius: 5px;
-  text-decoration: none;
-  text-transform: uppercase;
-  display:inline-block;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.btn-round {
-  color:#000;
-  padding: 8px;
-  background-color: #F0EFE7;
-  border-radius: 50%;
-}
-
-.btn-round:hover {
-  color:#F0EFE7;
-  background-color: #000;
 }
 
 td a + a {

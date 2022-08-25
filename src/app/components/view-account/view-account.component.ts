@@ -12,7 +12,7 @@ import { Account } from 'src/app/models/account.model';
 export class ViewAccountComponent implements OnInit {
   accountId: any;
   accountDetail: any;
-  delete:Account = {
+  delete = {
     "id": 9,
     "first_name": "David",
     "last_name": "Smith",

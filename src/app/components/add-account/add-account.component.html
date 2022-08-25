@@ -1,33 +1,43 @@
-<p>add-account works!</p>
+<div class="content">
+  <h2>Create a new account</h2>
 
-<div style="width: 400px; margin: auto;">
-  <div class="submit-form">
-    <div *ngIf="!submitted">
-      <div class="form-group">
-        <label for="first_name">First Name:</label>
-        <input
-          type="text"
-          class="form-control"
-          id="first_name"
-          required
-          [(ngModel)]="first_name"
-          name="first_name"
-        />
+  <div class="content-box">
+
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="first_name">First Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="first_name"
+            required
+            [(ngModel)]="first_name"
+            name="first_name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last Name:</label>
+          <input
+            class="form-control"
+            id="last_name"
+            required
+            [(ngModel)]="last_name"
+            name="last_name"
+          />
+        </div>
+        <div class="flex">
+          <a routerLink="/accounts" class="btn-orange medium">Go back</a>
+          <a (click)="addAccount()" class="btn-orange medium">Submit</a>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="last_name">Last Name:</label>
-        <input
-          class="form-control"
-          id="last_name"
-          required
-          [(ngModel)]="last_name"
-          name="last_name"
-        />
+      <div *ngIf="submitted">
+        <h4>{{response}}</h4>
+        <div class="flex">
+          <a routerLink="/accounts" class="btn-orange medium">Go back</a>
+          <a (click)="refresh()" class="btn-orange medium">Try again</a>
+        </div>
       </div>
-      <button (click)="addAccount()" class="btn btn-success">Submit</button>
-    </div>
-    <div *ngIf="submitted">
-      <h4>{{response}}</h4>
     </div>
   </div>
 </div>

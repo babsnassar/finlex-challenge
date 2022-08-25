@@ -30,7 +30,11 @@ export class AddAccountComponent implements OnInit {
         },
         error => {
           console.log(error);
-          this.response = 'Error!';
+          this.response = 'It was not possible to create this account!';
         })
+  }
+
+  refresh(): void {
+    window.location.reload();
   }
 }

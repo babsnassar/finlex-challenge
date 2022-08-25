@@ -1,41 +1,45 @@
-<p>update-employee works!</p>
+<div class="content">
+  <h2>Update account</h2>
 
-<div style="width: 400px; margin: auto;">
-  <div *ngIf="accountDetail" class="edit-form">
-    <h4>About {{accountDetail.first_name}}'s account</h4>
-    <form>
-      <div class="form-group">
-        <label for="title">First Name:</label>
-        <input
-          type="text"
-          class="form-control"
-          id="title"
-          [(ngModel)]="accountDetail.first_name"
-          name="title"
-        />
+  <div class="content-box">
+    <div *ngIf="accountDetail" class="edit-form">
+      <h4>About {{accountDetail.first_name}}'s account</h4>
+      <form>
+        <div class="form-group">
+          <label for="first_name">First Name:</label>
+          <input
+            type="first_name"
+            class="form-control"
+            id="first_name"
+            [(ngModel)]="accountDetail.first_name"
+            name="first_name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="last_name"
+            [(ngModel)]="accountDetail.last_name"
+            name="last_name"
+          />
+        </div>
+      </form>
+      <div class="flex">
+        <a (click)="cancel()" class="btn-orange medium">Go back</a>
+        <button
+          type="submit"
+          class="btn-orange medium"
+          (click)="updateAccount()"
+        >
+          Update
+        </button>
       </div>
-      <div class="form-group">
-        <label for="description">Last Name:</label>
-        <input
-          type="text"
-          class="form-control"
-          id="description"
-          [(ngModel)]="accountDetail.last_name"
-          name="description"
-        />
-      </div>
-    </form>
-    <button
-      type="submit"
-      class="badge badge-success"
-      (click)="updateAccount()"
-    >
-      Update
-    </button>
-    <p>{{ message }}</p>
+      <p>{{ message }}</p>
+    </div>
+    <div *ngIf="!accountDetail">
+      <h4>Cannot find this account.</h4>
+      <a (click)="cancel()" class="btn-orange medium">Go back</a>
+    </div>
   </div>
-  <div *ngIf="!accountDetail">
-    <br />
-    <p>Cannot find this account.</p>
-  </div>
-</div>

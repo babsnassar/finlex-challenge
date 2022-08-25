@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from 'src/app/services/account.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-update-account',
@@ -12,6 +13,7 @@ export class UpdateAccountComponent implements OnInit {
   accountDetail: any;
   message = '';
   constructor(
+    private location: Location,
     private accountService: AccountService,
     private route: ActivatedRoute,
     private router: Router) { }
@@ -24,7 +26,6 @@ export class UpdateAccountComponent implements OnInit {
       .subscribe(
         data => {
           this.accountDetail = data;
-          console.log(data);
         },
         error => {
           console.log(error);
@@ -40,5 +41,9 @@ export class UpdateAccountComponent implements OnInit {
         error => {
           console.log(error);
         });
+  }
+
+  cancel() {
+    this.location.back();
   }
 }
