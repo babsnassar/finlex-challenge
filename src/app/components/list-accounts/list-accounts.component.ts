@@ -12,33 +12,14 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 
 export class ListAccountsComponent implements OnInit {
-  // accounts: any;
+  accounts: Account[] = []
   displayedColumns: string[] = ['index', 'first_name', 'last_name', 'action'];
-  accounts: Account[] = [
-    {
-        "id": 1,
-        "first_name": "John",
-        "last_name": "Doe",
-        "regisration_date": "01/01/2019"
-    },
-    {
-        "id": 2,
-        "first_name": "Jane",
-        "last_name": "Doe",
-        "regisration_date": "01/01/2019"
-    },
-    {
-        "id": 3,
-        "first_name": "Davood",
-        "last_name": "Majidi",
-        "regisration_date": "02/08/2020"
-    }
-  ]
-  dataSource = new MatTableDataSource<Account>(this.accounts);
 
   @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
+  dataSource = new MatTableDataSource<Account>(this.accounts);
 
   constructor(private accountService: AccountService) { }
+
   ngOnInit(): void {
     this.retrieveAccounts();
   }
@@ -48,9 +29,15 @@ export class ListAccountsComponent implements OnInit {
   retrieveAccounts(): void {
     this.accountService.getAll()
       .subscribe(
+      //   {
+      //     next: data => this.accounts = data,
+      //     error: err => console.log(err)
+      // });
+
         data => {
           this.accounts = data;
-          console.log(data);
+          console.log(this.accounts);
+          this.dataSource = new MatTableDataSource<Account>(this.accounts);
         },
         error => {
           console.log(error);

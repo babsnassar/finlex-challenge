@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Account } from '../models/account.model';
 import { AccountPayload } from '../models/account-payload.model';
 
-const baseUrl = 'http://localhost:8080/';
+const baseUrl = 'http://localhost:8080';
 
 @Injectable({
   providedIn: 'root'
