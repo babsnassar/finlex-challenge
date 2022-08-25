@@ -8,6 +8,10 @@ input {
   margin-top: 10px;
 }
 
+.center {
+  justify-content: center;
+}
+
 .btn-orange {
   margin-bottom: 0;
 }

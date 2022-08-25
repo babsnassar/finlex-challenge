@@ -25,10 +25,10 @@
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef> Action </th>
         <td mat-cell *matCellDef="let element">
-          <a routerLink="/account/:id" class="btn-round">
+          <a routerLink="/accounts/{{element.id}}" class="btn-round">
             <i class="fa-solid fa-up-right-from-square"></i>
           </a>
-          <a routerLink="/account/update/:id" class="btn-round">
+          <a routerLink="/accounts/{{element.id}}" class="btn-round">
             <i class="fa-solid fa-pen-to-square"></i>
           </a>
         </td>

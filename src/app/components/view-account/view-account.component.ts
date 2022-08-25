@@ -10,14 +10,7 @@ import { Account } from 'src/app/models/account.model';
 })
 
 export class ViewAccountComponent implements OnInit {
-  accountId: any;
   accountDetail: any;
-  delete = {
-    "id": 9,
-    "first_name": "David",
-    "last_name": "Smith",
-    "regisration_date": "08/15/2022"
-}
 
   constructor(
     private accountService: AccountService,
@@ -29,6 +22,7 @@ export class ViewAccountComponent implements OnInit {
   ngOnInit(): void {
     this.getAccount(+this.route.snapshot.paramMap.get('id')!);
   }
+
   getAccount(id:number): void {
     this.accountService.get(id)
       .subscribe(

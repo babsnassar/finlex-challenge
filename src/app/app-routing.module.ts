@@ -8,8 +8,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'accounts', pathMatch: 'full' },
   { path: 'accounts', component: ListAccountsComponent },
   { path: 'account/create', component: AddAccountComponent },
-  { path: 'account/:id', component: ViewAccountComponent },
-  { path: 'account/update/:id', component: UpdateAccountComponent }
+  { path: 'accounts/:id', component: ViewAccountComponent },
+  { path: 'accounts/:id', component: UpdateAccountComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

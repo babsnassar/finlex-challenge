@@ -34,8 +34,4 @@ export class AddAccountComponent implements OnInit {
           this.response = 'It was not possible to create this account!';
         })
   }
-
-  refresh(): void {
-    window.location.reload();
-  }
 }

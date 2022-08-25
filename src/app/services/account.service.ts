@@ -16,12 +16,12 @@ export class AccountService {
     return this.http.get<Account[]>(`${baseUrl}/accounts`);
   }
   public get(id: number): Observable<Account> {
-    return this.http.get<Account>(`${baseUrl}/${id}`);
+    return this.http.get<Account>(`${baseUrl}/accounts/${id}`);
   }
   public create(payload: AccountPayload): Observable<Account> {
-    return this.http.post<Account>(baseUrl, payload);
+    return this.http.post<Account>(`${baseUrl}/accounts`, payload);
   }
   public update(id: number, account: Account): Observable<Account> {
-    return this.http.put<Account>(`${baseUrl}/${id}`, account);
+    return this.http.put<Account>(`${baseUrl}/accounts/${id}`, account);
   }
 }
