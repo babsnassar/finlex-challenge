@@ -8,7 +8,6 @@ import { ViewAccountComponent } from './components/view-account/view-account.com
 import { UpdateAccountComponent } from './components/update-account/update-account.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatTableModule}  from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -28,7 +27,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     MatTableModule,
-    MatPaginatorModule,
     BrowserAnimationsModule,
   ],
   providers: [],

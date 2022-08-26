@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Account } from 'src/app/models/account.model';
 import { AccountService } from 'src/app/services/account.service';
-import {AfterViewInit, ViewChild} from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
@@ -14,8 +12,6 @@ import { MatTableDataSource } from '@angular/material/table';
 export class ListAccountsComponent implements OnInit {
   accounts: Account[] = []
   displayedColumns: string[] = ['index', 'first_name', 'last_name', 'action'];
-
-  @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
   dataSource = new MatTableDataSource<Account>(this.accounts);
 
   constructor(private accountService: AccountService) { }
@@ -23,23 +19,15 @@ export class ListAccountsComponent implements OnInit {
   ngOnInit(): void {
     this.retrieveAccounts();
   }
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator!;
-  }
+
   retrieveAccounts(): void {
     this.accountService.getAll()
-      .subscribe(
-      //   {
-      //     next: data => this.accounts = data,
-      //     error: err => console.log(err)
-      // });
-
-        data => {
+      .subscribe( {
+        next: data => {
           this.accounts = data;
           this.dataSource = new MatTableDataSource<Account>(this.accounts);
         },
-        error => {
-          console.log(error);
-        });
+        error: err => console.log(err)
+      });
   }
 }

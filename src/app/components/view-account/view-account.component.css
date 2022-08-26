@@ -19,3 +19,11 @@ span {
 .mg-top {
   margin: 24px 0 0 0;
 }
+
+.flex {
+  margin-top: 10px;
+}
+
+.center {
+  justify-content: center;
+}

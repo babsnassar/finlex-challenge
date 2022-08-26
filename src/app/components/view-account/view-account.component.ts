@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from 'src/app/services/account.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Account } from 'src/app/models/account.model';
 
 @Component({
@@ -11,23 +11,22 @@ import { Account } from 'src/app/models/account.model';
 
 export class ViewAccountComponent implements OnInit {
   accountDetail: any;
+  id: number;
 
   constructor(
     private accountService: AccountService,
-    private route: ActivatedRoute,
-    private router: Router) { }
+    private route: ActivatedRoute,) {
+      this.id = +this.route.snapshot.paramMap.get('id')!
+    }
   ngOnInit(): void {
-    this.getAccount(+this.route.snapshot.paramMap.get('id')!);
+    this.getAccount(this.id);
   }
 
   getAccount(id:number): void {
     this.accountService.get(id)
-      .subscribe(
-        data => {
-          this.accountDetail = data;
-        },
-        error => {
-          console.log(error);
-        });
+      .subscribe( {
+        next: data => this.accountDetail = data,
+        error: err => console.log(err),
+      });
   }
 }
