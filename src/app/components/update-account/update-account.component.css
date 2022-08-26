@@ -3,6 +3,21 @@ h4 {
   text-align: center;
 }
 
+input {
+  width: 98%;
+  margin: 7px 0 15px 0;
+  height: 24px;
+}
+
 .btn-orange {
   margin-bottom: 0;
+}
+
+.mg-top {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.flex {
+  margin-top: 10px;
 }

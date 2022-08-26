@@ -1,9 +1,8 @@
 <div class="content">
-  <h2>Update account</h2>
+  <h2>Update {{accountDetail?.first_name}}'s account</h2>
 
   <div class="content-box">
     <div *ngIf="accountDetail" class="edit-form">
-      <h4>About {{accountDetail.first_name}}'s account</h4>
       <form>
         <div class="form-group">
           <label for="first_name">First Name:</label>
@@ -28,15 +27,11 @@
       </form>
       <div class="flex">
         <a (click)="cancel()" class="btn-orange medium">Go back</a>
-        <button
-          type="submit"
-          class="btn-orange medium"
-          (click)="updateAccount()"
-        >
+        <a (click)="updateAccount()" type="submit" class="btn-orange medium">
           Update
-        </button>
+        </a>
       </div>
-      <p>{{ message }}</p>
+      <p class="mg-top"> {{ message }}</p>
     </div>
     <div *ngIf="!accountDetail">
       <h4>Cannot find this account.</h4>

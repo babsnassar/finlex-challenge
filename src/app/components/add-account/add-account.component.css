@@ -1,7 +1,17 @@
+
+h4 {
+  margin: 20px 0 40px 0;
+  text-align: center;
+}
+
 input {
   width: 98%;
   margin: 7px 0 15px 0;
   height: 24px;
+}
+
+.btn-orange {
+  margin-bottom: 0;
 }
 
 .flex {
@@ -10,13 +20,4 @@ input {
 
 .center {
   justify-content: center;
-}
-
-.btn-orange {
-  margin-bottom: 0;
-}
-
-h4 {
-  margin: 20px 0 40px 0;
-  text-align: center;
 }
