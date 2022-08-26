@@ -27,3 +27,14 @@ span {
 .center {
   justify-content: center;
 }
+
+@media (max-width: 960px) {
+  .flex-box {
+    flex-direction: column;
+    gap: 20px;
+    align-items:flex-start;
+  }
+  .avatar {
+    margin: auto;
+  }
+}
