@@ -36,7 +36,6 @@ export class ListAccountsComponent implements OnInit {
 
         data => {
           this.accounts = data;
-          console.log(this.accounts);
           this.dataSource = new MatTableDataSource<Account>(this.accounts);
         },
         error => {

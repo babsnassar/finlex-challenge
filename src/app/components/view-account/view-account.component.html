@@ -1,19 +1,19 @@
 <div class="content">
   <div class="flex">
-    <h2>{{accountDetail.first_name}}'s account</h2>
-    <a routerLink="/account/update/:id" class="btn-orange"><i class="fa-solid fa-pen-to-square"></i> edit account</a>
+    <h2>{{accountDetail?.first_name}}'s account</h2>
+    <a routerLink="/accounts/{{accountDetail?.id}}/update" class="btn-orange"><i class="fa-solid fa-pen-to-square"></i> edit account</a>
   </div>
 
   <div class="content-box">
     <div class="flex-box">
       <img src="../../../assets/images/avatar.png" class="avatar">
       <div>
-        <h3><span>First name:</span> {{accountDetail.first_name}}</h3>
-        <h3><span>Last name:</span> {{accountDetail.last_name}}</h3>
+        <h3><span>First name:</span> {{accountDetail?.first_name}}</h3>
+        <h3><span>Last name:</span> {{accountDetail?.last_name}}</h3>
       </div>
       <div>
-        <h3><span>ID:</span> {{accountDetail.id}}</h3>
-        <h3><span>Registration:</span> {{accountDetail.regisration_date}}</h3>
+        <h3><span>ID:</span> {{accountDetail?.id}}</h3>
+        <h3><span>Registration:</span> {{accountDetail?.regisration_date}}</h3>
       </div>
     </div>
     <a routerLink="/accounts" class="btn-orange medium mg-top">Go back</a>

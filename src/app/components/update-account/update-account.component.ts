@@ -35,7 +35,6 @@ export class UpdateAccountComponent implements OnInit {
     this.accountService.update(this.accountDetail.id, this.accountDetail)
       .subscribe(
         response => {
-          console.log(response);
           this.message = 'The account was updated successfully!';
         },
         error => {

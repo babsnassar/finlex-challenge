@@ -26,7 +26,6 @@ export class AddAccountComponent implements OnInit {
     .pipe(finalize(() => this.submitted = true))
       .subscribe(
         response => {
-          console.log(response);
           this.response = 'You submitted successfully!';
         },
         error => {

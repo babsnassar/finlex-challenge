@@ -15,10 +15,7 @@ export class ViewAccountComponent implements OnInit {
   constructor(
     private accountService: AccountService,
     private route: ActivatedRoute,
-    private router: Router) {
-      // this.accountId = 0;
-      // this.accountDetail = { id: 0, first_name: '', last_name: ''}
-    }
+    private router: Router) { }
   ngOnInit(): void {
     this.getAccount(+this.route.snapshot.paramMap.get('id')!);
   }
@@ -28,7 +25,6 @@ export class ViewAccountComponent implements OnInit {
       .subscribe(
         data => {
           this.accountDetail = data;
-          console.log(data);
         },
         error => {
           console.log(error);

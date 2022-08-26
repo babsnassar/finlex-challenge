@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'accounts', component: ListAccountsComponent },
   { path: 'account/create', component: AddAccountComponent },
   { path: 'accounts/:id', component: ViewAccountComponent },
-  { path: 'accounts/:id', component: UpdateAccountComponent }
+  { path: 'accounts/:id/update', component: UpdateAccountComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
