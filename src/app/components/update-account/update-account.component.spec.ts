@@ -1,16 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ViewAccountComponent } from './view-account.component';
-import { RouterTestingModule } from '@angular/router/testing';
+import { UpdateAccountComponent } from './update-account.component';
 
-describe('ViewAccountComponent', () => {
+describe('UpdateAccountComponent', () => {
+
       beforeEach(() => TestBed.configureTestingModule({
         imports: [HttpClientTestingModule],
-        providers: [ViewAccountComponent]
+        providers: [UpdateAccountComponent]
       }));
 
        it('should be created', () => {
-        const service: ViewAccountComponent = TestBed.inject(ViewAccountComponent);
+        const service: UpdateAccountComponent = TestBed.inject(UpdateAccountComponent);
         expect(service).toBeTruthy();
        })
 });
