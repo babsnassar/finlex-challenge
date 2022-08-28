@@ -13,7 +13,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from "@angular/router/testing";
+import { Routes, RouterModule } from '@angular/router';
 
+const routes: Routes = []; // sets up routes constant where you define your routes
+
+// configures NgModule imports
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +34,7 @@ import { RouterTestingModule } from "@angular/router/testing";
     MatTableModule,
     BrowserAnimationsModule,
     RouterTestingModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]

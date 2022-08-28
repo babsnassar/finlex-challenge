@@ -21,19 +21,3 @@ describe('AddAccountComponent', () => {
           expect(result).toBe();
         })
 });
-
-
-
-    // it('should have addAccount function', () => {
-    //   const service =
-    //   AddAccountComponent.addAccount()
-    //   // const service: AddAccountComponent = TestBed.inject(AddAccountComponent);
-    //   // expect(service.getData).toBeTruthy();
-    //  });
-
-    //  describe('calculate', function() {
-    //   it('add', function() {
-    //     let result = Calculator.Sum(5, 2);
-    //     expect(result).equal(7);
-    //   });
-    // });

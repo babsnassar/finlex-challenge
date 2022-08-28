@@ -4,13 +4,19 @@ import { UpdateAccountComponent } from './update-account.component';
 
 describe('UpdateAccountComponent', () => {
 
-      beforeEach(() => TestBed.configureTestingModule({
-        imports: [HttpClientTestingModule],
-        providers: [UpdateAccountComponent]
-      }));
+  let service: UpdateAccountComponent;
 
-       it('should be created', () => {
-        const service: UpdateAccountComponent = TestBed.inject(UpdateAccountComponent);
-        expect(service).toBeTruthy();
-       })
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [
+        { provide: UpdateAccountComponent, useValue: UpdateAccountComponent }
+      ]
+    });
+    service = TestBed.inject(UpdateAccountComponent);
+  });
+
+  it('should be created', () => {
+  expect(service).toBeTruthy();
+  })
 });

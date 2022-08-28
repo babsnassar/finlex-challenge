@@ -10,6 +10,7 @@ const baseUrl = 'http://localhost:8080';
   providedIn: 'root'
 })
 
+// services use Angular HTTPClient to send HTTP requests
 export class AccountService {
   constructor(private http: HttpClient) { }
   public getAll(): Observable<Account[]> {

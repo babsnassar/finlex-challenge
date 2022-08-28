@@ -12,10 +12,11 @@ export class AddAccountComponent {
   first_name = '';
   last_name = '';
   submitted = false;
-  response = '';
+  message = '';
 
   constructor(private accountService: AccountService) { }
 
+  // function to create a new account with two fields: first_name and last_name
   addAccount(): void {
     const payload:AccountPayload = {
       first_name: this.first_name,
@@ -23,9 +24,10 @@ export class AddAccountComponent {
     }
 
     this.accountService.create(payload)
+      // it will run whenever any change is made in the observable
       .subscribe( {
-        next: () => this.response = 'You submitted successfully!',
-        error: () => this.response = 'It was not possible to create this account!',
+        next: () => this.message = 'You submitted successfully!',
+        error: () => this.message = 'It was not possible to create this account!',
         complete: () => this.submitted = true
       });
   }
