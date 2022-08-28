@@ -9,9 +9,16 @@ Web application to implement account service backend APIs - CRUD service to do a
 3. `Run`: run the service `make run_image`
 4. `Endpoint port`: once you execute make run_image command, you can access the endpoint at port 8080.
 
-**Dev server**:
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Dev server**: run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Dependencies
+
+- Docker: 20 or above
+- GNU Make: 3.81
+- rxjs version: ~7.5.0
+- tslib: ^2.3.0
+- zone.js: ~0.11.4
