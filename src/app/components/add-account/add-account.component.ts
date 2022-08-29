@@ -26,7 +26,7 @@ export class AddAccountComponent {
     this.accountService.create(payload)
       // it will run whenever any change is made in the observable
       .subscribe( {
-        next: () => this.message = 'You submitted successfully!',
+        next: account => this.message = `Account ${account.first_name} ${account.last_name} with id ${account.id} was successfully create at ${account.regisration_date}!`,
         error: () => this.message = 'It was not possible to create this account!',
         complete: () => this.submitted = true
       });
